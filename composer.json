@@ -1,0 +1,42 @@
+{
+    "name": "isdschools/nicecouch",
+    "description": "A library for working with doctrine couch-based documents.",
+    "authors": [
+        {
+            "name": "Jace Ferguson",
+            "email": "jace_ferguson@isdschools.org"
+        }
+    ],
+    "repositories": [{
+    	"type": "composer",
+    	"url": "http://packages.isdschools.org"
+    }],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*",
+        "illuminate/events": "4.2.*",
+        "doctrine/couchdb": "dev-master",
+        "nesbot/carbon": "~1.14",
+        "illuminate/database": "4.2.*"
+    },
+        "require-dev": {
+    	"phpunit/phpunit": "4.5.*",
+    	 "orchestra/testbench": "2.2.*",
+    	 "mockery/mockery": "*",
+    	 "satooshi/php-coveralls": "*"
+    },
+
+    "autoload": {
+        "classmap": [
+        "tests",
+        "tests/models",
+        "tests/seeds"
+        ],
+        "psr-0": {
+        	"Jferguson\\CouchDB\\": "src/",
+            "Jferguson\\EloquentCouchdb\\": "src/",
+            "Jferguson\\Eloquent\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
