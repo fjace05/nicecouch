@@ -16,7 +16,7 @@
         </testsuite>
         <!-- <testsuite name="all">
             <directory>tests/</directory>
-            <exclude>tests/MysqlRelationsTest.php</exclude>
+            <exclude>tests/RDBMSRelationsTest.php</exclude>
         </testsuite>
         <testsuite name="schema">
             <directory>tests/SchemaTest.php</directory>
@@ -36,14 +36,14 @@
             <!-- <directory>tests/RelationsTest.php</directory> -->
         </testsuite>
         <testsuite name="relations">
-            <!-- <directory>tests/RelationsTest.php</directory>  -->
+            <directory>tests/RelationsTest.php</directory>
             <directory>tests/EmbeddedRelationsTest.php</directory>
         </testsuite>
-        <!-- <testsuite name="mysqlrelations">
+        <testsuite name="rdbmsrelations">
             <directory>tests/RelationsTest.php</directory>
-            <directory>tests/MysqlRelationsTest.php</directory>
+            <directory>tests/RDBMSRelationsTest.php</directory>
         </testsuite>
-        <testsuite name="validation">
+        <!--<testsuite name="validation">
             <directory>tests/ValidationTest.php</directory>
         </testsuite> -->
     </testsuites>

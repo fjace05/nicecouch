@@ -13,9 +13,9 @@ class User extends Eloquent   {
         return $this->hasMany('Book', 'author_id');
     }
 
-    public function mysqlBooks()
+    public function rdbmsBooks()
     {
-        return $this->hasMany('MysqlBook', 'author_id');
+        return $this->hasMany('RDBMSBook', 'author_id');
     }
 
     public function items()
@@ -28,9 +28,9 @@ class User extends Eloquent   {
         return $this->hasOne('Role');
     }
 
-    public function mysqlRole()
+    public function rdbmsRole()
     {
-        return $this->hasOne('MysqlRole');
+        return $this->hasOne('RDBMSRole');
     }
 
 	public function clients()

@@ -6,15 +6,15 @@ class Book extends Eloquent {
 
 	protected $type = 'books';
 	protected static $unguarded = true;
-	protected $primaryKey = 'title';
+	protected $primaryKey = '_id';
 
     public function author()
     {
         return $this->belongsTo('User', 'author_id');
     }
 
-    public function mysqlAuthor()
+    public function rdbmsAuthor()
     {
-        return $this->belongsTo('MysqlUser', 'author_id');
+        return $this->belongsTo('RDBMSUser', 'author_id');
     }
 }

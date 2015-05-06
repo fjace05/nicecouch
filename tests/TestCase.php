@@ -28,6 +28,7 @@ class TestCase extends Orchestra\Testbench\TestCase {
         $config = require 'config/database.php';
         $app['config']->set('database.default', 'nicecouch');
         $app['config']->set('database.connections.nicecouch', $config['connections']['nicecouch']);
+        $app['config']->set('database.connections.sqlite', $config['connections']['sqlite']);
     }
     
     public function testNothing(){

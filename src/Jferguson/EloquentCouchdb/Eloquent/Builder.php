@@ -1,6 +1,8 @@
 <?php namespace Jferguson\EloquentCouchdb\Eloquent;
 
-class Builder extends \Illuminate\Database\Eloquent\Builder
+use Illuminate\Database\Eloquent\Builder as BaseBuilder;
+
+class Builder extends BaseBuilder
 {
   
   protected $passthru = array('insert', 'insertGetId', 'pluck', 'count', 'exists', 'getUuids');

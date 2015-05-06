@@ -1,11 +1,11 @@
 <?php
 
 use \Illuminate\Support\Facades\Schema;
-use Jenssegers\Eloquent\Model as Eloquent;
+use Jferguson\Eloquent\Model as Eloquent;
 
-class MysqlUser extends Eloquent {
+class RDBMSUser extends Eloquent {
 
-	protected $connection = 'mysql';
+	protected $connection = 'sqlite';
     protected $table = 'users';
     protected static $unguarded = true;
 
@@ -25,11 +25,11 @@ class MysqlUser extends Eloquent {
      */
     public static function executeSchema()
     {
-        $schema = Schema::connection('mysql');
+        $schema = Schema::connection('sqlite');
 
         if (!$schema->hasTable('users'))
         {
-            Schema::connection('mysql')->create('users', function($table)
+            Schema::connection('sqlite')->create('users', function($table)
             {
                 $table->increments('id');
                 $table->string('name');

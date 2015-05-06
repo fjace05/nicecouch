@@ -1,11 +1,11 @@
 <?php
 
 use \Illuminate\Support\Facades\Schema;
-use Jenssegers\Eloquent\Model as Eloquent;
+use Jferguson\Eloquent\Model as Eloquent;
 
-class MysqlBook extends Eloquent {
+class RDBMSBook extends Eloquent {
 
-    protected $connection = 'mysql';
+    protected $connection = 'sqlite';
 	protected $table = 'books';
 	protected static $unguarded = true;
 	protected $primaryKey = 'title';
@@ -21,11 +21,11 @@ class MysqlBook extends Eloquent {
      */
     public static function executeSchema()
     {
-        $schema = Schema::connection('mysql');
+        $schema = Schema::connection('sqlite');
 
         if (!$schema->hasTable('books'))
         {
-            Schema::connection('mysql')->create('books', function($table)
+            Schema::connection('sqlite')->create('books', function($table)
             {
                 $table->string('title');
                 $table->string('author_id');

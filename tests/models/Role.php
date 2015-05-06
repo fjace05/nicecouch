@@ -12,9 +12,9 @@ class Role extends Eloquent {
     	return $this->belongsTo('User');
     }
 
-    public function mysqlUser()
+    public function rdbmsUser()
     {
-    	return $this->belongsTo('MysqlUser');
+    	return $this->belongsTo('RDBMSUser');
     }
 
 }

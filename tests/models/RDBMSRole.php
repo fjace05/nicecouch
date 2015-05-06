@@ -1,11 +1,11 @@
 <?php
 
 use \Illuminate\Support\Facades\Schema;
-use Jenssegers\Eloquent\Model as Eloquent;
+use Jferguson\Eloquent\Model as Eloquent;
 
-class MysqlRole extends Eloquent {
+class RDBMSRole extends Eloquent {
 
-    protected $connection = 'mysql';
+    protected $connection = 'sqlite';
 	protected $table = 'roles';
 	protected static $unguarded = true;
 
@@ -14,9 +14,9 @@ class MysqlRole extends Eloquent {
     	return $this->belongsTo('User');
     }
 
-    public function mysqlUser()
+    public function rdbmsUser()
     {
-    	return $this->belongsTo('MysqlUser');
+    	return $this->belongsTo('RDBMSUser');
     }
 
     /**
@@ -25,11 +25,11 @@ class MysqlRole extends Eloquent {
      */
     public static function executeSchema()
     {
-        $schema = Schema::connection('mysql');
+        $schema = Schema::connection('sqlite');
 
         if (!$schema->hasTable('roles'))
         {
-            Schema::connection('mysql')->create('roles', function($table)
+            Schema::connection('sqlite')->create('roles', function($table)
             {
                 $table->string('type');
                 $table->string('user_id');
