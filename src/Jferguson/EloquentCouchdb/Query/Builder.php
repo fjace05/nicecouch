@@ -171,7 +171,7 @@ class Builder extends BaseBuilder
     return $this;
   }
 
-  public function whereIn($column, $values, $boolean = 'and', $not = false){
+  public function whereIn($column, $value, $boolean = 'and', $not = false){
 
     if($not){
       throw new \InvalidArgumentException("'False' whereIn clauses not allowed.");
@@ -187,17 +187,17 @@ class Builder extends BaseBuilder
       throw new \InvalidArgumentException("Only 'and' whereIn clauses are permitted.");
     }
 
-    if($values instanceof Closure){
+    if($value instanceof Closure){
       throw new \InvalidArgumentException("Closure-based 'where-in' clauses are not permitted.");
     }
 
-    if(!is_array($values)){
-      $values = [$values];
+    if(!is_array($value)){
+        $value = [$value];
     }
 
-    $this->wheres[] = compact('type', 'column', 'values', 'boolean');
+    $this->wheres[] = compact('type', 'column', 'value', 'boolean');
 
-    $this->addBinding($values, 'where');
+    $this->addBinding($value, 'where');
 
     return $this;
   }

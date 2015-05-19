@@ -62,6 +62,15 @@ abstract class Model extends \Illuminate\Database\Eloquent\Model {
         return new BelongsTo($query, $this, $foreignKey, $otherKey, $relation);
     }
 
+//    public function hasMany($related, $foreignKey = null, $localKey = null){
+//        if(!is_subclass_of($related, 'Jferguson\EloquentCouchdb\Model')){
+//            return parent::hasMany($related, $foreignKey, $localKey);
+//        }
+//
+//
+//    }
+
+
 
 }
 ?>
