@@ -1,4 +1,4 @@
-<?php
+<?php namespace Jferguson\EloquentCouchdb\testing;
 class TestApplicationModel extends TestCase
 {
   public function tearDown(){

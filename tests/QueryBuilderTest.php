@@ -1,4 +1,4 @@
-<?php
+<?php namespace Jferguson\EloquentCouchdb\testing;
 
 class QueryBuilderTest extends TestCase {
 

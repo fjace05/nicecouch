@@ -1,4 +1,4 @@
-<?php
+<?php namespace Jferguson\EloquentCouchdb\testing;
 
 use \Illuminate\Support\Facades\Schema;
 use Jferguson\Eloquent\Model as Eloquent;

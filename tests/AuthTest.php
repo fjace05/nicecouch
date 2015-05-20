@@ -1,4 +1,4 @@
-<?php
+<?php namespace Jferguson\EloquentCouchdb\testing;
 
 use Illuminate\Auth\Passwords\PasswordBroker;
 

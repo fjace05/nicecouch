@@ -1,4 +1,4 @@
-<?php
+<?php namespace Jferguson\EloquentCouchdb\testing;
 
 class EmbeddedRelationsTest extends TestCase {
 

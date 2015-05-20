@@ -1,7 +1,6 @@
-<?php
+<?php namespace Jferguson\EloquentCouchdb\testing;
 
 use Jferguson\EloquentCouchdb\Model as Eloquent;
-
 
 class User extends Eloquent   {
 
